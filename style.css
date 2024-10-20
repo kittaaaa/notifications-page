@@ -1,0 +1,161 @@
+:root {
+    --bg-color: hsl(210, 60%, 98%);
+    --notify-time: hsl(211, 68%, 94%);
+    --post-color: ;
+    --notify-bg: hsl(205, 33%, 90%);
+    --sender-color: hsl(224, 21%, 14%);
+    --title: hsl(224, 21%, 14%);
+    --unread: hsl(1, 90%, 64%);
+    --unread-bg: hsl(219, 85%, 26%);
+    --msg-color: hsl(219, 12%, 42%);
+    --club-color: hsl(219, 85%, 26%);
+
+    --grayish-blue: hsl(219, 14%, 63%);
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+*,*::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--msg-color);
+}
+
+main {
+    width: inherit;
+    /* m */
+    min-height: inherit;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    /* align-items: center; */
+}
+img {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+.chess-img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+main .wraper {
+    width: 90%;
+    max-width: 450px;
+    background-color: white;
+}
+main .wraper header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 1rem 0;
+}
+
+main .wraper header .title {
+    color: var(--title);
+}
+main .wraper header .all-read-btn {
+    color: var(--msg-color);
+    font-size: 1.1rem;
+}
+main .wraper header .title .no-of-notifications {
+    color: white;
+    background-color: var(--unread-bg);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding:0.1rem 0.5rem 0.1rem 0.5rem;
+    border-radius: 10px;
+}
+main .wraper .notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+main .wraper .notifications .notification {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    /* background-color: var(--notify-bg); */
+}
+main .wraper .notifications .unread {
+
+    background-color: var(--bg-color);
+}
+main .wraper .notifications .unread .sender__message {
+    cursor: pointer;
+}
+main .wraper .notifications .unread .sender__message .msg .unread-dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: var(--unread);
+    border-radius: 50%;
+    margin: 0 0.5rem 0 0.5rem;
+    
+}
+
+/* main .wraper .notifications .notification:hover {
+    background-color: var(--notify-bg);
+
+} */
+
+main .wraper .notifications .notification .sender {
+    color: var(--sender-color);
+    font-weight: 700;
+}
+
+main .wraper .notifications .notification .post {
+    font-weight: 700;
+}
+
+main .wraper .notifications .notification .club {
+    color: var(--club-color);
+    font-weight: 700    ;
+}
+main .wraper .notifications .notification .private-msg {
+    /* color: var(--club-color); */
+    /* font-weight: 700    ; */
+    border: 1px solid hsl(211, 68%, 94%);
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+.change-bg {
+    background-color: var(--bg-color);
+}
+
+@media screen and (min-width: 1440px) {
+    /*  */
+    main .wraper {
+        min-width: 900px;
+        padding: 2rem;
+        border-radius: 10px;
+    }
+}
